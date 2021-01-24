@@ -27,7 +27,7 @@ The `node_modules.zip` file will be generated directly under the dist folder.
 ## How to apply it to Redmobile
 
 1. Place the generated Zip file directly under the Download folder of your Android device.
-2. go to Menu -> Settings in RedMobile and open the Modules screen.
+2. go to Menu -> Upload in RedMobile and open the Modules screen.
 3. click the Upload button
 4. After rebooting, you will be able to use custom nodes.
 
