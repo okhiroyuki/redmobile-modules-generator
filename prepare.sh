@@ -1,9 +1,10 @@
 #!/bin/sh
 echo 'start prepare.sh'
+rm dist/node_modules.zip
 rm -rf node_modules
 rm package-lock.json
 npm i --production
-../../node_modules/.bin/modclean -r --ignore="example*,examples"
+./node_modules/.bin/modclean -r --ignore="example*,examples"
 rm -rf ./node_modules/recursive-readdir/test
 rm -rf ./node_modules/agent-base/test
 rm -rf ./node_modules/needle/test
