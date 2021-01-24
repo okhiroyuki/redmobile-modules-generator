@@ -20,7 +20,6 @@
     "node-red": "^1.2.6",
     "node-red-contrib-image-output": "^0.6.3",
     "node-red-contrib-string": "^1.0.0",
-    "node-red-contrib-telegrambot": "^8.9.6",
     "node-red-dashboard": "^2.26.1",
     "node-red-node-base64": "^0.2.1",
     "node-red-node-email": "^1.8.2",
