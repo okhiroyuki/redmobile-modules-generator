@@ -3,7 +3,7 @@
   "description": "RedMobile Custom Module Generator",
   "main": "main.js",
   "scripts": {
-    "build": "bash prepare.sh && node main.js"
+    "build": "node main.js"
   },
   "dependencies": {
     "@red-mobile/red-mobile-nodes": "^2.6.11",

@@ -12,11 +12,14 @@ git clone https://github.com/okhiroyuki/redmobile-modules-generator.git
 
 ## Usage
 
-First, Install the Node-RED Custom Node you want to use with the npm command.
+First, do `npm i`.
+
+Next, Install the Node-RED Custom Node you want to use with the npm command.
 
 Sample:
 
 ```bash
+// Add any module
 npm i node-red-contrib-telegrambot
 ```
 
@@ -31,7 +34,6 @@ The `node_modules.zip` file will be generated directly under the dist folder.
 3. Select the **node_modules.zip** file.
 4. click the Upload button
 5. After rebooting, you will be able to use custom nodes.
-
 
 ## Note
 
