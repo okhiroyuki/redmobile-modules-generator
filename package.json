@@ -15,7 +15,7 @@
     "express": "^4.17.1",
     "fs-extra": "^9.1.0",
     "multer": "^1.4.1",
-    "node-red": "^1.2.8",
+    "node-red": "^1.2.9",
     "node-red-contrib-image-output": "^0.6.3",
     "node-red-contrib-string": "^1.0.0",
     "node-red-dashboard": "^2.27.0",
