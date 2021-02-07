@@ -1,5 +1,7 @@
 # redmobile-modules-generator
 
+[![](http://img.youtube.com/vi/s_MvkH3IXrM/0.jpg)](http://www.youtube.com/watch?v=s_MvkH3IXrM "")
+
 ## Installation
 
 ```bash
