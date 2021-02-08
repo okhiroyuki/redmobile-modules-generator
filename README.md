@@ -1,6 +1,9 @@
 # redmobile-modules-generator
 
+Check Youtube👇
+
 [![](http://img.youtube.com/vi/s_MvkH3IXrM/0.jpg)](http://www.youtube.com/watch?v=s_MvkH3IXrM "")
+
 
 ## Installation
 
@@ -10,6 +13,7 @@ git clone https://github.com/okhiroyuki/redmobile-modules-generator.git
 
 ## Requirements
 
+- RedMobile v7.x or higher
 - node.js
 
 ## Usage
