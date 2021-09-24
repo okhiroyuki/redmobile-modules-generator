@@ -1,5 +1,5 @@
 {
-  "version": "0.1.3",
+  "version": "0.2.0",
   "description": "RedMobile Custom Module Generator",
   "main": "main.js",
   "scripts": {
@@ -13,19 +13,19 @@
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "fs-extra": "^9.1.0",
+    "fs-extra": "^10.0.0",
     "modclean": "^3.0.0-beta.1",
     "multer": "^1.4.1",
-    "node-red": "^1.3.2",
+    "node-red": "^2.0.5",
     "node-red-contrib-image-output": "^0.6.3",
     "node-red-contrib-string": "^1.0.0",
-    "node-red-dashboard": "^2.28.2",
+    "node-red-dashboard": "^3.0.4",
     "node-red-node-base64": "^0.3.0",
     "node-red-node-email": "^1.12.0",
     "qs": "^6.10.0",
     "uuid": "^8.3.2",
-    "ws": "^6.2.1"
+    "ws": "^7.5.1"
   }
 }
