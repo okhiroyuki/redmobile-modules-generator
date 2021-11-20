@@ -2,6 +2,7 @@ const fs = require('fs');
 const archiver = require('archiver');
 const childProcess = require('child_process');
 const modclean = require('modclean');
+const rimraf = require('rimraf');
 
 const distDir = 'dist';
 const targetDir = 'node_modules';
@@ -30,9 +31,15 @@ const zipArchive = async () => {
 }
 
 const cleanDir = (dir) => {
-    if (fs.existsSync(dir)) {
-        fs.rmdirSync(dir, { recursive: true });
-    }
+    return new Promise((resolve) => {
+        if (fs.existsSync(dir)) {
+            rimraf(dir, () => {
+                resolve();
+            });
+        }else{
+            resolve();
+        }
+    });
 }
 
 const runNpm = (cmd, args) => {
@@ -55,9 +62,9 @@ const runNpm = (cmd, args) => {
 }
 
 (async() => {
-    cleanDir(distDir);
+    await cleanDir(distDir);
     fs.mkdirSync(distDir);
-    cleanDir(targetDir);
+    await cleanDir(targetDir);
     fs.unlinkSync('package-lock.json');
     try {
         await runNpm('npm',['i','--production']);
