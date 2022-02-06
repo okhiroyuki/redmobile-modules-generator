@@ -14,7 +14,7 @@ git clone https://github.com/okhiroyuki/redmobile-modules-generator.git
 ## Requirements
 
 - RedMobile v7.x or higher
-- node.js
+- node.js @ 12.19.0
 
 ## Usage
 
