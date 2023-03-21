@@ -1,14 +1,15 @@
 {
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "RedMobile Custom Module Generator",
   "main": "main.js",
   "scripts": {
     "serve": "node ./node_modules/node-red/red.js",
-    "build": "node main.js"
+    "build": "node main.js",
+    "prebuild": "npx rimraf dist"
   },
   "dependencies": {
     "@red-mobile/red-mobile-nodes": "^2.7.5",
-    "archiver": "^5.2.0",
+    "archiver": "^5.3.1",
     "axios": "^0.25.0",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
@@ -18,18 +19,18 @@
     "fs-extra": "^10.0.0",
     "modclean": "^3.0.0-beta.1",
     "multer": "^1.4.1",
-    "node-red": "^2.2.0",
+    "node-red": "^3.0.2",
     "node-red-contrib-image-output": "^0.6.3",
     "node-red-contrib-string": "^1.0.0",
-    "node-red-dashboard": "^3.1.5",
+    "node-red-dashboard": "^3.4.0",
     "node-red-node-base64": "^0.3.0",
-    "node-red-node-email": "^1.14.0",
-    "qs": "^6.10.0",
-    "rimraf": "^3.0.2",
+    "node-red-node-email": "^1.18.4",
+    "qs": "^6.11.1",
+    "rimraf": "^4.4.0",
     "uuid": "^8.3.2",
-    "ws": "^8.4.0"
+    "ws": "^8.13.0"
   },
   "engines": {
-    "node": ">=12"
+    "node": ">=16"
   }
 }
