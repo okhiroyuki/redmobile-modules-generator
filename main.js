@@ -52,7 +52,7 @@ const runNpm = (cmd, args) => {
     fs.mkdirSync(distDir);
     fs.unlinkSync('package-lock.json');
     try {
-        await runNpm('npm',['i','--production']);
+        await runNpm('npm',['i','--omit=dev']);
         let mc = modclean({ignorePatterns:['example*', 'examples']});
         mc.clean();
         await zipArchive();
