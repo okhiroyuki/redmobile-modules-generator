@@ -11,6 +11,8 @@ const zipArchive = async () => {
     const zipPath = `${targetDir}.zip`;
     const output = fs.createWriteStream(zipPath);
 
+    console.log('archive...')
+
     output.on('close', function() {
         console.log(archive.pointer() + ' total bytes');
         console.log('archiver has been finalized and the output file descriptor has closed.');
@@ -48,15 +50,26 @@ const runNpm = (cmd, args) => {
     });
 }
 
+const clearDir = (dir) => {
+    if (fs.existsSync(dir)) {
+        fs.rmSync(dir, { recursive: true, force: true });
+    }
+}
+
 (async() => {
+    clearDir(distDir);
     fs.mkdirSync(distDir);
-    fs.unlinkSync('package-lock.json');
-    try {
-        await runNpm('npm',['i','--omit=dev']);
-        let mc = modclean({ignorePatterns:['example*', 'examples']});
-        mc.clean();
-        await zipArchive();
-    }catch(e){
-        console.error(e.stack);
+    if( fs.existsSync( 'package-lock.json' ) ){
+        fs.unlinkSync('package-lock.json');
+        try {
+            await runNpm('npm',['i','--omit=dev']);
+            let mc = modclean({ignorePatterns:['example*', 'examples']});
+            mc.clean();
+            await zipArchive();
+        }catch(e){
+            console.error(e.stack);
+        }
+    }else{
+        console.log('Start with the first step (npm i)');
     }
 })();

@@ -4,8 +4,7 @@
   "main": "main.js",
   "scripts": {
     "serve": "node ./node_modules/node-red/red.js",
-    "build": "node main.js",
-    "prebuild": "npx rimraf dist"
+    "build": "node main.js"
   },
   "dependencies": {
     "@red-mobile/red-mobile-nodes": "^3.0.3",
@@ -26,7 +25,6 @@
     "node-red-node-base64": "^0.3.0",
     "node-red-node-email": "^2.0.1",
     "qs": "^6.11.1",
-    "rimraf": "^5.0.1",
     "uuid": "^9.0.0",
     "ws": "^8.13.0"
   },
