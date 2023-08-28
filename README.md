@@ -2,8 +2,7 @@
 
 Check Youtube👇
 
-[![](http://img.youtube.com/vi/s_MvkH3IXrM/0.jpg)](http://www.youtube.com/watch?v=s_MvkH3IXrM "")
-
+[![youtube](http://img.youtube.com/vi/s_MvkH3IXrM/0.jpg)](http://www.youtube.com/watch?v=s_MvkH3IXrM "")
 
 ## Installation
 
@@ -18,20 +17,16 @@ git clone https://github.com/okhiroyuki/redmobile-modules-generator.git
 
 ## Usage
 
-First, do `npm i`.
+1. `npm i`
+1. Install the Node-RED Custom Node you want to use with the npm command.
 
-Next, Install the Node-RED Custom Node you want to use with the npm command.
+    ```bash
+    // sample
+    npm i node-red-contrib-telegrambot
+    ```
 
-Sample:
-
-```bash
-// Add any module
-npm i node-red-contrib-telegrambot
-```
-
-Finally, do `npm run build`.
-
-The `node_modules.zip` file will be generated directly under the dist folder.
+1. `npm run build`
+1. The `node_modules.zip` file will be generated directly under the dist folder.
 
 ## How to apply it to Redmobile
 
