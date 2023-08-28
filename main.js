@@ -1,11 +1,10 @@
 const fs = require('fs');
 const archiver = require('archiver');
-const childProcess = require('child_process');
 const modclean = require('modclean');
 
 const distDir = 'dist';
 const targetDir = 'node_modules';
-const distPath = 'dist/node_modules.zip';
+const distPath = `${distDir}/${targetDir}.zip`;
 
 const zipArchive = async () => {
     const zipPath = `${targetDir}.zip`;
@@ -31,25 +30,6 @@ const zipArchive = async () => {
     await archive.finalize();
 }
 
-const runNpm = (cmd, args) => {
-    return new Promise((resolve) => {
-        let n = childProcess.spawn(cmd,args);
-        n.stdout.setEncoding('utf-8');
-        n.stdout.on('data', (data) => {
-            console.log(`${data}`);
-        });
-
-        n.stderr.on('data', (data) => {
-            console.error(`${data}`);
-        });
-
-        n.on('close', (code) => {
-            console.log(`child process exited with code ${code}`);
-            resolve();
-        });
-    });
-}
-
 const clearDir = (dir) => {
     if (fs.existsSync(dir)) {
         fs.rmSync(dir, { recursive: true, force: true });
@@ -59,17 +39,11 @@ const clearDir = (dir) => {
 (async() => {
     clearDir(distDir);
     fs.mkdirSync(distDir);
-    if( fs.existsSync( 'package-lock.json' ) ){
-        fs.unlinkSync('package-lock.json');
-        try {
-            await runNpm('npm',['i','--omit=dev']);
-            let mc = modclean({ignorePatterns:['example*', 'examples']});
-            mc.clean();
-            await zipArchive();
-        }catch(e){
-            console.error(e.stack);
-        }
-    }else{
-        console.log('Start with the first step (npm i)');
+    try {
+        let mc = modclean({ignorePatterns:['example*', 'examples']});
+        mc.clean();
+        await zipArchive();
+    }catch(e){
+        console.error(e.stack);
     }
 })();
