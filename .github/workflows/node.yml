@@ -24,6 +24,6 @@ jobs:
       - name: Archive production artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: dist
+          name: node_modules.zip
           path: |
-            dist
+            dist/node_modules.zip
