@@ -7,7 +7,7 @@
     "build": "node main.js"
   },
   "dependencies": {
-    "@red-mobile/red-mobile-core-modules": "1.0.0",
+    "@red-mobile/red-mobile-core-modules": "1.0.1",
     "archiver": "6.0.1",
     "modclean": "3.0.0-beta.1"
   },
