@@ -1,15 +1,12 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:base",
-    ":timezone(Asia/Tokyo)"
-  ],
+  "extends": ["config:base", ":timezone(Asia/Tokyo)"],
   "rangeStrategy": "pin",
   "major": {
     "automerge": false
   },
   "nodenv": {
-    "enabled": false
+    "enabled": true
   },
   "lockFileMaintenance": {
     "enabled": true,
