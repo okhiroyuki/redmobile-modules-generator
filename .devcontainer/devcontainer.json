@@ -20,7 +20,11 @@
   // Configure tool-specific properties.
   "customizations": {
     "vscode": {
-      "extensions": ["EditorConfig.EditorConfig"],
+      "extensions": [
+        "EditorConfig.EditorConfig",
+        "DavidAnson.vscode-markdownlint",
+        "eamodio.gitlens"
+      ],
       "settings": {
         "terminal.integrated.defaultProfile.linux": "zsh"
       }
