@@ -4,7 +4,6 @@
   "name": "Node.js",
   // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
   "image": "mcr.microsoft.com/devcontainers/javascript-node:1-18-bullseye",
-  "workspaceFolder": "workspace",
   "mounts": [
     "source=node_modules_${devcontainerId},target=${containerWorkspaceFolder}/node_modules,type=volume"
   ],
